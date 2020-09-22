@@ -1,0 +1,1281 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!--scripts --> 
+        <script src="scripts/scriptsFormularios.js"></script>
+        <script>window.addEventListener( "pageshow", function ( event ) {
+                var historyTraversal = event.persisted || 
+                                       ( typeof window.performance != "undefined" && 
+                                            window.performance.navigation.type === 2 );
+                if ( historyTraversal ) {
+                  // Handle page restore.
+                  window.location.reload();
+                }
+              });
+        </script>
+        <title>TFG</title>
+    </head>
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <h3 class="masthead-brand">Selecciona los ejercicios</h3>
+
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+                        <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Ecuaciones
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformGrado2')">Segundo Grado</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformPolinomios')">Poliniomios</button>
+                                    </div>
+                                </li>
+                                 
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Logaritmos
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLogProducto')">Producto</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLogRaiz')">Raiz</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLogCociente')">Cociente</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLogPotencia')">Potencia</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLogLibre')">Libre</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLogNeperiano')">Neperiano</button>
+                                    </div>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Límites
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLimitePol')">Polinomicos</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLimiteTri')">Trigonométricos</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLimiteCoc')">Cociciente de Polinomios</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLimiteDif')">Diferencia de Cocientes</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformLimiteExpLog')">Exponenciales/Logaritmicos</button>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Derivadas
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformDerivadaSim')">Simples</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformDerivadaTri')">Trigonométricas</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformDerivadaPot')">Potencias</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformDerivadaRaiz')">Raices</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformDerivadaExpLog')">Exponenciales/Logaritmicas</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformDerivadaComb')">Combinación</button>
+                                    </div>
+                                </li>
+                                
+                                
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Integrales
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformIntegralIndef')">Indefinida</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformIntegralDef')">Definida</button>
+                                    </div>
+                                </li>
+                                
+                                  <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Matrices
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformMatriz')">Operaciones Básicas</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformMatrizInvert')">Inversión Matrices</button>
+                                        <button class="dropdown-item" type="button" onclick="mostrarOcultar('divformMatrizMultM')">Multiplicación Matricial</button>
+                                    </div>
+                                </li>
+                                
+                                <li><button class="btn btn-outline-info" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">?</button>
+                                </li>
+                                
+                            </ul>
+                             
+     
+    
+                        </div>
+                    </nav>
+
+
+                </div>
+
+            </header>
+
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+                                  <p class="lead">Ayuda Expresiones Comunes</p> 
+                                  <div class='container' ><div class='row'><div class='col'>
+                                        <table class="table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Expr</th>
+                                            <th scope="col">Equivalente</th>
+                                          </tr>
+                                          
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>número e</td>
+                                            <td>%e</td>
+                                          </tr>
+                                          <tr>
+                                            <td>razón aurea</td>
+                                            <td>%phi</td>
+                                          </tr>
+                                          <tr>
+                                            <td>número π</td>
+                                            <td>%pi</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                              </div><div class='col'>
+                                        <table class="table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Expr</th>
+                                            <th scope="col">Equivalente</th>
+                                          </tr>
+                                          
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>∞</td>
+                                            <td>inf</td>
+                                          </tr>
+                                          <tr>
+                                            <td>-∞</td>
+                                            <td>minf</td>
+                                          </tr>
+                                          <tr>
+                                            <td>√x</td>
+                                            <td>sqrt(x)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                              </div><div class='col'>
+                              <table class="table-bordered"><tbody><tr><td>Siempre que se haga uso de una variable, esta debe ser 'x'.<td></tr> </tbody></table>
+                              </div>
+                                      </div></div>
+                                  <p class="lead">Ayuda funciones trigonométricas</p> 
+                                 <small class="form-text text-muted">Para usar las expresiones F(x) debe usarse su equivalente.</small> 
+                               <div><div class='container' ><div class='row'><div class='col'>
+                                
+                                 <table class="table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Expr. F(x)</th>
+                                            <th scope="col">Equivalente</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>sen(x)</td>
+                                            <td>sin(x)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>cos(x)</td>
+                                            <td>cos(x)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>tg(x)</td>
+                                            <td>tan(x)</td>
+                                          </tr>
+
+                                        </tbody>
+                                      </table>
+                                  </div>
+                                 <div class='col'>
+                                 <table class="table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Expr.F(x)</th>
+                                            <th scope="col">Equivalente</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>sec(x)</td>
+                                            <td>sec(x)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>cosec(x)</td>
+                                            <td>csc(x)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>cot(x)</td>
+                                            <td>cot(x)</td>
+                                          </tr>
+
+                                        </tbody>
+                                      </table>
+                                 </div>
+                                 <div class='col'>
+                                 <table class="table-bordered">
+                                        <thead>
+                                          <tr>
+                                             <th scope="col">Expr. F(x)</th>
+                                            <th scope="col">Equivalente</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>arcsen(x)</td>
+                                            <td>asin(x)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>arccos(x)</td>
+                                            <td>acos(x)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>arctg(x)</td>
+                                            <td>atan(x)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                 </div>
+                              </div></div></div>
+                           
+    </div>
+  </div>
+</div>
+            
+      
+
+            <main role="main" class="inner cover">
+                  <form method="post" action="MaximaResult" name="FormEcGrado2" class="border border-primary">
+                    <div class="container">
+
+                        <!-- POLINOMIOS -->  
+                        <div id="divformPolinomios" style="display: none">
+                            <div> 
+                                <p class="lead">Poliniomios</p> 
+                                <div>
+                                    <label for="NumPolinomios">Número Polinomios:</label>
+                                    <input type="number" autocomplete="off" id="NumPolinomios" name="NumPolinomios" min="0" max="40" value="0" size="1" onfocus="addExtra('NumPolinomios','formPolinomiosExtra')" onchange="addExtra('NumPolinomios','formPolinomiosExtra')">
+                                    <button type="button" id="botonAleatorioPolinomios" class="btn btn-secondary" onclick="RandomPolinomio('formPolinomiosExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-Polinomios-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-Polinomios-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoPolinomio" name="IntervaloMinimoPolinomio" size="1" value="-15">  , <input type="number" id="IntervaloMaximoPolinomio" name="IntervaloMaximoPolinomio" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectPolinomiosDecimales" id="SelectPolinomiosDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div> 
+
+                                    <label for="GradoPolinomios">Grado:</label><input type="number" id="GradoPolinomios" size="1" name="GradoPolinomios" min="1" max="20" value="1">
+                                </div>
+                            </div>
+                            <div id="formPolinomiosExtra"></div>
+                        </div>
+                        <!-- FIN POLINOMIOS --> 
+                        <!-- ECUACIONES GRADO 2 -->  
+                        <div id="divformGrado2" style="display: none">
+                            <div> 
+                                <p class="lead">Ecuaciones 2º Grado</p> 
+                                <div>
+                                    <!--<button type="button" id="botonMostrarMasEcuaciones2Grado" class="btn btn-secondary" onclick="mostrarOcultar('formGrado2Oculto', 'botonMostrarMasEcuaciones2Grado')">+</button>--> 
+                                    <label for="NumEcGrado2">Número Ecuaciones:</label>
+                                    <input type="number" autocomplete="off" id="NumEcGrado2" name="NumEcGrado2" min="0" max="40" value="0" onfocus="addExtra('NumEcGrado2','formGrado2Extra')" onchange="addExtra('NumEcGrado2','formGrado2Extra')">
+                                    <button type="button" id="botonAleatorioEcuaciones2Grado" class="btn btn-secondary" onclick="RandomEcLog('formGrado2Extra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-EcGrado2-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-EcGrado2-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoEcGrado2" name="IntervaloMinimoEcGrado2" size="1" value="-15">  , <input type="number" id="IntervaloMaximoEcGrado2" name="IntervaloMaximoEcGrado2" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectEcGrado2Decimales" id="SelectEcGrado2Decimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div> 
+                   
+                                </div>
+                            </div>
+                            <input type="checkbox" id="FormEcGrado2checkbox" name="FormEcGrado2checkbox" value="solucionReal"  onclick="ComprobarSolucionReal2()">
+                            <label for="FormEcGrado2checkbox"> Comprobar solución real</label><br>
+                            <div id="formGrado2Extra"></div>
+                        </div>
+                        <!--FIN ECUACIONES GRADO 2 --> 
+                        <!-- LOGARITMOS -->   
+                        <div class="row">
+
+                            <div id="divformLogProducto" class="col" style="display: none">
+                                <div> 
+                                    <p class="lead">Logaritmos Producto</p> 
+                                    <div>
+                                        <label for="NumLogProducto">Número Logaritmos</label>
+                                    <input type="number" autocomplete="off" id="NumLogProducto" name="NumLogProducto" min="0" max="40" value="0" onfocus="addExtra('NumLogProducto','formLogProductoExtra')" onchange="addExtra('NumLogProducto','formLogProductoExtra')">
+                                        <button type="button" id="botonAleatorioLogaritmosProdcuto" class="btn btn-secondary" onclick="RandomEcLog('formLogProductoExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LogProd-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LogProd-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLogProd" name="IntervaloMinimoLogProd" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLogProd" name="IntervaloMaximoLogProd" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLogProdDecimales" id="SelectLogProdDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                   
+                                    </div>
+                                </div><div id="formLogProductoExtra"></div>
+
+                            </div>
+
+                            <div id="divformLogRaiz" class="col" style="display: none">
+                                <div> 
+                                    <p class="lead">Logaritmos Raiz</p> 
+                                    <div>  <label for="numLogRaiz">Número Logaritmos</label>
+                                    <input type="number" autocomplete="off" id="NumLogRaiz" name="NumLogRaiz" min="0" max="40" value="0" onfocus="addExtra('NumLogRaiz','formLogRaizExtra')" onchange="addExtra('NumLogRaiz','formLogRaizExtra')">
+                                        <button type="button" id="botonAleatorioLogaritmosRaiz" class="btn btn-secondary" onclick="RandomEcLog('formLogRaizExtra')">Aleatorio</button></div>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LogRaiz-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LogRaiz-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLogRaiz" name="IntervaloMinimoLogRaiz" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLogRaiz" name="IntervaloMaximoLogRaiz" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLogRaizDecimales" id="SelectLogRaizDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                  
+                                </div> 
+                                <div id="formLogRaizExtra"></div>
+       
+                                <div class="alert alert-info" role="alert" id="showInfoLogRaiz" style="display: none"></div>
+
+                            </div>
+
+                            <div id="divformLogPotencia" class="col" style="display: none">
+                                <div> 
+                                    <p class="lead">Logaritmos Potencia</p> 
+                                    <div><label for="numLogPotencia">Número Logaritmos</label>
+                                    <input type="number" autocomplete="off" id="NumLogPotencia" name="NumLogPotencia" min="0" max="40" value="0" onfocus="addExtra('NumLogPotencia','formLogPotenciaExtra')" onchange="addExtra('NumLogPotencia','formLogPotenciaExtra')">
+                                        <button type="button" id="botonAleatorioLogaritmosPotencia" class="btn btn-secondary" onclick="RandomEcLog('formLogPotenciaExtra')">Aleatorio</button></div>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LogPot-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LogPot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLogPot" name="IntervaloMinimoLogPot" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLogPot" name="IntervaloMaximoLogPot" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLogPotDecimales" id="SelectLogPotDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                    
+                                </div> 
+                                <div id="formLogPotenciaExtra"></div>
+                               
+                                <div class="alert alert-info" role="alert" id="showInfoLogPotencia" style="display: none"></div>
+
+                            </div>
+                            <div id="divformLogCociente" class="col" style="display: none">
+                                <div> 
+                                    <p class="lead">Logaritmos Cociente</p> 
+                                    <div><label for="numLogCociente">Número Logaritmos</label>
+                                    <input type="number" autocomplete="off" id="NumLogCociente" name="NumLogCociente" min="0" max="40" value="0" onfocus="addExtra('NumLogCociente','formLogCocienteExtra')" onchange="addExtra('NumLogCociente','formLogCocienteExtra')">
+                                        <button type="button" id="botonAleatorioLogaritmosPotencia" class="btn btn-secondary" onclick="RandomEcLog('formLogCocienteExtra')">Aleatorio</button></div>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LogCoc-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LogCoc-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLogCoc" name="IntervaloMinimoLogCoc" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLogCoc" name="IntervaloMaximoLogCoc" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLogCocDecimales" id="SelectLogCocDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                     
+                                </div>
+                                <div id="formLogCocienteExtra"></div>
+                                <div class="alert alert-info" role="alert" id="showInfoLogCociente" style="display: none"></div>
+
+                            </div>
+                              <div id="divformLogLibre" class="col" style="display: none">
+                                <div> 
+                                    <p class="lead">Logaritmos Libres</p> 
+                                    <div><label for="numLogLibre">Número Logaritmos</label>
+                                    <input type="number" autocomplete="off" id="NumLogLibre" name="NumLogLibre" min="0" max="40" value="0" onfocus="addExtra('NumLogLibre','formLogLibreExtra')" onchange="addExtra('NumLogLibre','formLogLibreExtra')">
+                                        <button type="button" id="botonAleatorioLogaritmosLibre" class="btn btn-secondary" onclick="RandomEcLog('formLogLibreExtra')">Aleatorio</button></div>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LogLibre-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LogLibre-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLogLibre" name="IntervaloMinimoLogLibre" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLogLibre" name="IntervaloMaximoLogLibre" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLogLibreDecimales" id="SelectLogLibreDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                     
+                                </div>
+                                <div id="formLogLibreExtra"></div>
+                                <div class="alert alert-info" role="alert" id="showInfoLogCociente" style="display: none"></div>
+
+                            </div>
+                            <div id="divformLogNeperiano" class="col" style="display: none">
+                                <div> 
+                                    <p class="lead">Logaritmos Neperianos</p> 
+                                    <div><label for="numLogNeperiano">Número Logaritmos</label>
+                                    <input type="number" autocomplete="off" id="NumLogNeperiano" name="NumLogNeperiano" min="0" max="40" value="0" onfocus="addExtra('NumLogNeperiano','formLogNeperianoExtra')" onchange="addExtra('NumLogNeperiano','formLogNeperianoExtra')">
+                                        <button type="button" id="botonAleatorioLogaritmosNeperiano" class="btn btn-secondary" onclick="RandomEcLog('formLogNeperianoExtra')">Aleatorio</button></div>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LogNeperiano-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LogNeperiano-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLogNeperiano" name="IntervaloMinimoLogNeperiano" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLogNeperiano" name="IntervaloMaximoLogNeperiano" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLogNeperianoDecimales" id="SelectLogNeperianoDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                  
+                                </div>
+                                <div id="formLogNeperianoExtra"></div>
+                                <div class="alert alert-info" role="alert" id="showInfoLogNeperiano" style="display: none"></div>
+
+                            </div>                           
+                            
+                            
+                            
+                             </div>
+                        <!-- FIN LOGARITMOS -->   
+
+                        
+                        <!-- LIMITES -->
+                        <div class="row">
+                            
+                        <div id="divformLimitePol" class="col" style="display: none">
+                            <div> 
+                                <p class="lead">Límite Polinomico</p> 
+                                <div>
+                                    <label for="NumLimitePol">Número Limites</label>
+                                    <input type="number" autocomplete="off" id="NumLimitePol" name="NumLimitePol" min="0" max="40" value="0" onfocus="addExtra('NumLimitePol','formLimitePolExtra')" onchange="addExtra('NumLimitePol','formLimitePolExtra')">
+                                    <button type="button" id="botonAleatorioLimitePol" class="btn btn-secondary" onclick="RandomLimite('formLimitePolExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LimitePol-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LimitePol-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLimitePol" name="IntervaloMinimoLimitePol" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLimitePol" name="IntervaloMaximoLimitePol" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLimitePolDecimales" id="SelectLimitePolDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                   
+                                </div>
+                            </div>
+                            <div id="formLimitePolExtra"></div>
+                            
+                        </div>
+                        
+                        <div id="divformLimiteTri" class="col" style="display: none">
+                            <div> 
+                                <p class="lead">Límite Trigonometrico</p> 
+                                <div>
+                                    <label for="NumLimiteTri">Número Limites</label>
+                                    <input type="number" autocomplete="off" id="NumLimiteTri" name="NumLimiteTri" min="0" max="40" value="0" onfocus="addExtra('NumLimiteTri','formLimiteTriExtra')" onchange="addExtra('NumLimiteTri','formLimiteTriExtra')">
+                                    <button type="button" id="botonAleatorioLimiteTri" class="btn btn-secondary" onclick="RandomLimite('formLimiteTriExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LimiteTri-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LimiteTri-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLimiteTri" name="IntervaloMinimoLimiteTri" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLimiteTri" name="IntervaloMaximoLimiteTri" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLimiteTriDecimales" id="SelectLimiteTriDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                   
+                                </div>
+                            </div>
+                            <div id="formLimiteTriExtra"></div>
+
+                          </div>
+                         
+                        <div id="divformLimiteCoc" class="col" style="display: none">
+                            <div> 
+                                <p class="lead">Límite Cociente</p> 
+                                <div>
+                                    <label for="NumLimiteCoc">Número Limites</label>
+                                    <input type="number" autocomplete="off" id="NumLimiteCoc" name="NumLimiteCoc" min="0" max="40" value="0" onfocus="addExtra('NumLimiteCoc','formLimiteCocExtra')" onchange="addExtra('NumLimiteCoc','formLimiteCocExtra')">
+                                    <button type="button" id="botonAleatorioLimite" class="btn btn-secondary" onclick="RandomLimite('formLimiteCocExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LimiteCoc-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LimiteCoc-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLimiteCoc" name="IntervaloMinimoLimiteCoc" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLimiteCoc" name="IntervaloMaximoLimiteCoc" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLimiteCocDecimales" id="SelectLimiteCocDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                     
+                                </div>
+                            </div>
+                            <div id="formLimiteCocExtra"></div>
+                                 </div>
+                        
+                            <div id="divformLimiteDif" class="col" style="display: none">
+                            <div> 
+                                <p class="lead">Límite Diferencia</p> 
+                                <div>
+                                    <label for="NumLimitDife">Número Limites</label>
+                                    <input type="number" autocomplete="off" id="NumLimiteDif" name="NumLimiteDif" min="0" max="40" value="0" onfocus="addExtra('NumLimiteDif','formLimiteDifExtra')" onchange="addExtra('NumLimiteDif','formLimiteDifExtra')">
+                                    <button type="button" id="botonAleatorioLimite" class="btn btn-secondary" onclick="RandomLimite('formLimiteDifExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LimiteDife-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LimiteDife-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLimiteDife" name="IntervaloMinimoLimiteDife" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLimiteDife" name="IntervaloMaximoLimiteDife" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLimiteDifeDecimales" id="SelectLimiteDifeDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                     
+                                </div>
+                            </div>
+                            <div id="formLimiteDifExtra"></div>
+                          </div>
+                            
+                        <div id="divformLimiteExpLog" class="col" style="display: none">
+                            <div> 
+                                <p class="lead">Límite Exp/Log</p> 
+                                <div>
+                                    <label for="NumLimiteExpLog">Número Limites</label>
+                                    <input type="number" autocomplete="off" id="NumLimiteExpLog" name="NumLimiteExpLog" min="0" max="40" value="0" onfocus="addExtra('NumLimiteExpLog','formLimiteExpLogExtra')" onchange="addExtra('NumLimiteExpLog','formLimiteExpLogExtra')">
+                                    <button type="button" id="botonAleatorioLimite" class="btn btn-secondary" onclick="RandomLimite('formLimiteExpLogExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-LimiteExpLog-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-LimiteExpLog-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoLimiteExpLog" name="IntervaloMinimoLimiteExpLog" size="1" value="-15">  , <input type="number" id="IntervaloMaximoLimiteExpLog" name="IntervaloMaximoLimiteExpLog" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectLimiteExpLogDecimales" id="SelectLimiteExpLogDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>               
+                                </div>
+                            </div>
+                            <div id="formLimiteExpLogExtra"></div>
+                         </div>
+                        
+                        </div>
+                        <!--FIN LIMITES -->                         
+                        
+                        <!-- DERIVADAS -->  
+                        <div class="row">    
+                       
+                        <div id="divformDerivadaSim"  class="col" style="display: none">
+                             <div>
+                                <p class="lead">Derivada Simple</p> 
+                                <div> <label for="NumDerivadaSim">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumDerivadaSim" name="NumDerivadaSim" min="0" max="40" value="0" onfocus="addExtra('NumDerivadaSim','formDerivadaExtraSim')" onchange="addExtra('NumDerivadaSim','formDerivadaExtraSim')">
+                                    <button type="button" id="botonAleatorioDerivadaSim" class="btn btn-secondary" onclick="RandomDerivada('formDerivadaExtraSim')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-DerivadaSim-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-DerivadaSim-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoDerivadaSim" name="IntervaloMinimoDerivadaSim" size="1" value="-15">  , <input type="number" id="IntervaloMaximoDerivadaSim" name="IntervaloMaximoDerivadaSim" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectDerivadaSimDecimales" id="SelectDerivadaSimDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>                    
+                                </div>
+                            </div>
+                            <div id="formDerivadaExtraSim"></div>
+
+                              <small id="limiteHelp" class="form-text text-muted">La variable "n" se refiere a la derivada n-ésima.</small>
+
+                        </div>
+ 
+                        <div id="divformDerivadaTri"  class="col" style="display: none">
+                             <div>
+                                <p class="lead">Der Trigonometrica</p> 
+                                <div> <label for="NumDerivadaTri">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumDerivadaTri" name="NumDerivadaTri" min="0" max="40" value="0" onfocus="addExtra('NumDerivadaTri','formDerivadaExtraTri')" onchange="addExtra('NumDerivadaTri','formDerivadaExtraTri')">
+                                    <button type="button" id="botonAleatorioDerivadaTri" class="btn btn-secondary" onclick="RandomDerivada('formDerivadaExtraTri')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-DerivadaTri-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-DerivadaTri-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoDerivadaTri" name="IntervaloMinimoDerivadaTri" size="1" value="-15">  , <input type="number" id="IntervaloMaximoDerivadaTri" name="IntervaloMaximoDerivadaTri" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectDerivadaTriDecimales" id="SelectDerivadaTriDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>     
+                                </div>
+                            </div>
+                            <div id="formDerivadaExtraTri"></div>
+
+                              <small id="limiteHelp" class="form-text text-muted">La variable "n" se refiere a la derivada n-ésima.</small>
+
+                        </div>
+                            
+                        <div id="divformDerivadaPot"  class="col" style="display: none">
+                             <div>
+                                <p class="lead">Derivada Potencia</p> 
+                                <div> <label for="NumDerivadaPot">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumDerivadaPot" name="NumDerivadaPot" min="0" max="40" value="0" onfocus="addExtra('NumDerivadaPot','formDerivadaExtraPot')" onchange="addExtra('NumDerivadaPot','formDerivadaExtraPot')">
+                                    <button type="button" id="botonAleatorioDerivadaPot" class="btn btn-secondary" onclick="RandomDerivada('formDerivadaExtraPot')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-DerivadaPot-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-DerivadaPot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoDerivadaPot" name="IntervaloMinimoDerivadaPot" size="1" value="-15">  , <input type="number" id="IntervaloMaximoDerivadaPot" name="IntervaloMaximoDerivadaPot" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectDerivadaPotDecimales" id="SelectDerivadaPotDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>    
+                                </div>
+                            </div>
+                            <div id="formDerivadaExtraPot"></div>
+
+                              <small id="limiteHelp" class="form-text text-muted">La variable "n" se refiere a la derivada n-ésima.</small>
+
+                        </div>                       
+                            
+                        <div id="divformDerivadaRaiz"  class="col" style="display: none">
+                             <div>
+                                <p class="lead">Derivada Raiz</p> 
+                                <div> <label for="NumDerivadaRaiz">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumDerivadaRaiz" name="NumDerivadaRaiz" min="0" max="40" value="0" onfocus="addExtra('NumDerivadaRaiz','formDerivadaExtraRaiz')" onchange="addExtra('NumDerivadaRaiz','formDerivadaExtraRaiz')">
+                                    <button type="button" id="botonAleatorioDerivadaRaiz" class="btn btn-secondary" onclick="RandomDerivada('formDerivadaExtraRaiz')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-DerivadaRaiz-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-DerivadaRaiz-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoDerivadaRaiz" name="IntervaloMinimoDerivadaRaiz" size="1" value="-15">  , <input type="number" id="IntervaloMaximoDerivadaRaiz" name="IntervaloMaximoDerivadaRaiz" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectDerivadaRaizDecimales" id="SelectDerivadaRaizDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>    
+                                </div>
+                            </div>
+                            <div id="formDerivadaExtraRaiz"></div>
+
+                              <small id="limiteHelp" class="form-text text-muted">La variable "n" se refiere a la derivada n-ésima.</small>
+
+                        </div>                                            
+ 
+                        <div id="divformDerivadaExpLog"  class="col" style="display: none">
+                             <div>
+                                <p class="lead">Derivada Exp/Log</p> 
+                                <div> <label for="NumDerivadaExpLog">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumDerivadaExpLog" name="NumDerivadaExpLog" min="0" max="40" value="0" onfocus="addExtra('NumDerivadaExpLog','formDerivadaExtraExpLog')" onchange="addExtra('NumDerivadaExpLog','formDerivadaExtraExpLog')">
+                                    <button type="button" id="botonAleatorioDerivadaExpLog" class="btn btn-secondary" onclick="RandomDerivada('formDerivadaExtraExpLog')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-DerivadaExpLog-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-DerivadaExpLog-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoDerivadaExpLog" name="IntervaloMinimoDerivadaExpLog" size="1" value="-15">  , <input type="number" id="IntervaloMaximoDerivadaExpLog" name="IntervaloMaximoDerivadaExpLog" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectDerivadaExpLogDecimales" id="SelectDerivadaExpLogDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>   
+                                </div>
+                            </div>
+                            <div id="formDerivadaExtraExpLog"></div>
+
+                              <small id="limiteHelp" class="form-text text-muted">La variable "n" se refiere a la derivada n-ésima.</small>
+
+                        </div>  
+                            
+                        <div id="divformDerivadaComb"  class="col" style="display: none">
+                             <div>
+                                <p class="lead">Derivada Combinaciones</p> 
+                                <div> <label for="NumDerivadaComb">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumDerivadaComb" name="NumDerivadaComb" min="0" max="40" value="0" onfocus="addExtra('NumDerivadaComb','formDerivadaExtraComb')" onchange="addExtra('NumDerivadaComb','formDerivadaExtraComb')">
+                                    <button type="button" id="botonAleatorioDerivadaComb" class="btn btn-secondary" onclick="RandomDerivada('formDerivadaExtraComb')">Aleatorio</button>
+                                 <label for="SelectDerivadaCombDecimales">Num Decimales:</label>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-DerivadaComb-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-DerivadaComb-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoDerivadaComb" name="IntervaloMinimoDerivadaComb" size="1" value="-15">  , <input type="number" id="IntervaloMaximoDerivadaComb" name="IntervaloMaximoDerivadaComb" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectDerivadaCombDecimales" id="SelectDerivadaCombDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>    
+                                </div>
+                                
+                                
+                            <div class="panel-heading">Tipo Derivada:  </div>
+                            <div class="panel-body">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input  class="custom-control-input" type="checkbox" id="checkboxDerivadaSim">
+                                <label for="checkboxDerivadaSim" class="custom-control-label">Simples</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxDerivadaTri">
+                             <label class="custom-control-label" for="checkboxDerivadaTri">Trigonométricas</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                              <input class="custom-control-input" type="checkbox" id="checkboxDerivadaPot">
+                              <label class="custom-control-label" for="checkboxDerivadaPot">Potencias</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                            <input class="custom-control-input" type="checkbox" id="checkboxDerivadaRaiz">
+                            <label class="custom-control-label" for="checkboxDerivadaRaiz">Raíces</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                            <input class="custom-control-input" type="checkbox" id="checkboxDerivadaExpLog">
+                            <label class="custom-control-label" for="checkboxDerivadaExpLog">Exp/Log</label>
+                            </div>                                
+                            </div>
+
+                            <div class="panel-heading">Tipo Operaciones: </div>
+                            <div class="panel-body">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input class="custom-control-input" type="checkbox" id="checkboxDerivadaOpMult">
+                                <label class="custom-control-label" for="checkboxDerivadaOpMult">Multiplicación</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxDerivadaOpDiv">
+                             <label class="custom-control-label" for="checkboxDerivadaOpDiv">División</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxDerivadaOpSum">
+                             <label class="custom-control-label" for="checkboxDerivadaOpSum">Suma</label>
+                            </div>
+                            </div>
+                                
+                                
+                                
+                            </div>
+                            <div id="formDerivadaExtraComb"></div>
+
+                            <small id="limiteHelp" class="form-text text-muted">La variable "n" se refiere a la derivada n-ésima.</small>
+
+                        </div>
+                            
+                        </div>    
+                        <!--FIN DERIVADAS -->   
+                         <!-- INTEGRALES -->  
+                        <div class="row">    
+                       
+                        <div id="divformIntegralIndef"  class="col" style="display: none">
+                             <div class='container' >
+                            <div> 
+                                <p class="lead">Integral Indefinida</p> 
+                                <div><label for="NumIntegralIndef">Número Integrales</label>
+                                    <input type="number" autocomplete="off" id="NumIntegralIndef" name="NumIntegralIndef" min="0" max="40" value="0" onfocus="addExtra('NumIntegralIndef','formIntegralIndefExtra')" onchange="addExtra('NumIntegralIndef','formIntegralIndefExtra')">
+                                    <button type="button" id="botonAleatorioIntegralIndef" class="btn btn-secondary" onclick="RandomIntegralIndef('formIntegralIndefExtra')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-IntegralIndefComb-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-IntegralIndefComb-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoIntegralIndefComb" name="IntervaloMinimoIntegralIndefComb" size="1" value="-15">  , <input type="number" id="IntervaloMaximoIntegralIndefComb" name="IntervaloMaximoIntegralIndefComb" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectIntegralIndefCombDecimales" id="SelectIntegralIndefCombDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>   
+                                </div>
+                                
+                                
+                            <div class="panel-heading">Tipo Integrales: </div>
+                            <div class="panel-body">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input  class="custom-control-input" type="checkbox" id="checkboxIntegralIndefSim">
+                                <label for="checkboxIntegralIndefSim" class="custom-control-label">Simples</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefTri">
+                             <label class="custom-control-label" for="checkboxIntegralIndefTri">Trigonométricas</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                              <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefPot">
+                              <label class="custom-control-label" for="checkboxIntegralIndefPot">Potencias</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                            <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefRaiz">
+                            <label class="custom-control-label" for="checkboxIntegralIndefRaiz">Raíces</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                            <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefExpLog">
+                            <label class="custom-control-label" for="checkboxIntegralIndefExpLog">Exp/Log</label>
+                            </div>                                
+                            </div>
+
+                            <div class="panel-heading">Tipo Operaciones: </div>
+                            <div class="panel-body">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefOpMult">
+                                <label class="custom-control-label" for="checkboxIntegralIndefOpMult">Multiplicación</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefOpDiv">
+                             <label class="custom-control-label" for="checkboxIntegralIndefOpDiv">División</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxIntegralIndefOpSum">
+                             <label class="custom-control-label" for="checkboxIntegralIndefOpSum">Suma</label>
+                            </div>
+                            </div>
+                                
+                                
+  
+                            </div>
+                            <div id="formIntegralIndefExtra"></div>
+
+
+                        </div>
+
+                    
+    
+                       
+                        </div>
+                            
+                        <div id="divformIntegralDef"   class="col" style="display: none">
+                             <div class='container' > 
+                            <div> 
+                                <p class="lead">Integral Definida</p> <div><label for="NumIntegralDef">Número Derivadas</label>
+                                    <input type="number" autocomplete="off" id="NumIntegralDef" name="NumIntegralDef" min="0" max="40" value="0" onfocus="addExtra('NumIntegralDef','formIntegralDefExtra')" onchange="addExtra('NumIntegralDef','formIntegralDefExtra')">
+                                    <button type="button" id="botonAleatorioIntegralDef" class="btn btn-secondary" onclick="RandomIntegralDef('formIntegralDefExtra')">Aleatorio</button>
+                                <label for="SelectIntegralDefCombDecimales">Num Decimales:</label>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-IntegralDefComb-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-IntegralDefComb-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoIntegralDefComb" name="IntervaloMinimoIntegralDefComb" size="1" value="-15">  , <input type="number" id="IntervaloMaximoIntegralDefComb" name="IntervaloMaximoIntegralDefComb" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectIntegralDefCombDecimales" id="SelectIntegralDefCombDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                         
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                </div>
+                            
+                                
+                            <div class="panel-heading">Tipo Integrales: </div>
+                            <div class="panel-body">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input  class="custom-control-input" type="checkbox" id="checkboxIntegralDefSim">
+                                <label for="checkboxIntegralDefSim" class="custom-control-label">Simples</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefTri">
+                             <label class="custom-control-label" for="checkboxIntegralDefTri">Trigonométricas</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                              <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefPot">
+                              <label class="custom-control-label" for="checkboxIntegralDefPot">Potencias</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                            <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefRaiz">
+                            <label class="custom-control-label" for="checkboxIntegralDefRaiz">Raíces</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                            <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefExpLog">
+                            <label class="custom-control-label" for="checkboxIntegralDefExpLog">Exp/Log</label>
+                            </div>                                
+                            </div>
+
+                            <div class="panel-heading">Tipo Operaciones: </div>
+                            <div class="panel-body">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefOpMult">
+                                <label class="custom-control-label" for="checkboxIntegralDefOpMult">Multiplicación</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefOpDiv">
+                             <label class="custom-control-label" for="checkboxIntegralDefOpDiv">División</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                             <input class="custom-control-input" type="checkbox" id="checkboxIntegralDefOpSum">
+                             <label class="custom-control-label" for="checkboxIntegralDefOpSum">Suma</label>
+                            </div>
+                            </div>
+
+                            </div>
+                            <div id="formIntegralDefExtra"></div>
+                            <div>
+
+                              <small id="limiteHelp" class="form-text text-muted">Integral definida en [n,m].</small>
+
+                        </div>
+ 
+                       
+    
+                        </div>
+                        
+
+                        </div>     </div>
+                        <!--FIN INTEGRALES -->     
+                        
+                         <!-- MATRICES -->  
+                        <div id="divformMatriz" style="display: none">
+                            <div> 
+                                <p class="lead">Matrices</p> 
+                                <div>
+                                   
+                                    <label for="NumMatriz">Número Matrices:</label>
+                                    <input type="number" autocomplete="off" id="NumMatriz" name="NumMatriz" min="0" max="40" value="0" onfocus="addExtra('NumMatriz','formMatrizExtra')" onchange="addExtra('NumMatriz','formMatrizExtra')">
+                                    <button type="button" id="botonAleatorioMatriz" class="btn btn-secondary" onclick="MatrizAleatoria('NumMatriz')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-Matriz-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-Matriz-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoMatriz" name="IntervaloMinimoMatriz" size="1" value="-15">  , <input type="number" id="IntervaloMaximoMatriz" name="IntervaloMaximoMatriz" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectMatrizDecimales" id="SelectMatrizDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                </div>
+                            </div>
+                            <div id="formMatrizExtra"></div>
+                            
+                        </div>
+                        <div id="divformMatrizInvert" style="display: none">
+                            <div> 
+                                <p class="lead">Matrices Invertir</p> 
+                                <div>
+                                   
+                                    <label for="NumMatrizInvert">Número Matrices:</label>
+                                    <input type="number" autocomplete="off" id="NumMatrizInvert" name="NumMatrizInvert" min="0" max="40" value="0" onfocus="addExtra('NumMatrizInvert','formMatrizExtraInvert')" onchange="addExtra('NumMatrizInvert','formMatrizExtraInvert')">
+                                    <button type="button" id="botonAleatorioMatrizInvert" class="btn btn-secondary" onclick="MatrizAleatoriaInvert('NumMatrizInvert')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-MatrizInvert-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-MatrizInvert-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoMatrizInvert" name="IntervaloMinimoMatrizInvert" size="1" value="-15">  , <input type="number" id="IntervaloMaximoMatrizInvert" name="IntervaloMaximoMatrizInvert" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectMatrizInvertDecimales" id="SelectMatrizInvertDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                </div>
+                            </div>
+                            <div id="formMatrizExtraInvert"></div>
+                            
+                        </div>
+                        <div id="divformMatrizMultM" style="display: none">
+                            <div> 
+                                <p class="lead">Mult. Matricial</p> 
+                                <div>
+                                   
+                                    <label for="NumMatrizMultM">Número Matrices:</label>
+                                    <input type="number" autocomplete="off" id="NumMatrizMultM" name="NumMatrizMultM" min="0" max="40" value="0" onfocus="addExtra('NumMatrizMultM','formMatrizExtraMultM')" onchange="addExtra('NumMatrizMultM','formMatrizExtraMultM')">
+                                    <button type="button" id="botonAleatorioMatrizMultM" class="btn btn-secondary" onclick="MatrizAleatoriaMultM('NumMatrizMultM')">Aleatorio</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-MatrizMult-modal" >
+                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"></path></svg>
+                                    </button>
+                                         <!-- Modal -->
+                                        <div class="modal fade bd-MatrizMult-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <p class="font-weight-bold lead">Configuración Menú Aleatorio </p>
+                                                <div><p class="lead">Valores al azar en el intervalo: [ <input type="number" id="IntervaloMinimoMatrizMult" name="IntervaloMinimoMatrizMult" size="1" value="-15">  , <input type="number" id="IntervaloMaximoMatrizMult" name="IntervaloMaximoMatrizMult" size="1" value="15">  ]</p></div>
+                                                <div><p class="lead">Num Decimales:                        
+                                                <select name="SelectMatrizMultMDecimales" id="SelectMatrizMultMDecimales">
+                                                    <option value="0" selected>0</option> 
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select></p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                </div>
+                            </div>
+                            <div id="formMatrizExtraMultM"></div>
+                            
+                        </div> 
+                        <!--FIN MATRICES --> 
+                        
+                        
+                        <div class="row"> 
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary" id="FormEcGrado2submit">Confirmar</button>
+                            </div>
+                        </div>
+ 
+                    </div>
+
+                </form>
+
+
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Sergio Collazo Sorribas | Sergio6010@gmail.com</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

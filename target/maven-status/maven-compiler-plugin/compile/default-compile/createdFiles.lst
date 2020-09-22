@@ -1,0 +1,16 @@
+com\mycompany\sergiocollazo\tfg\controlers\ControlConfiguracion.class
+com\mycompany\sergiocollazo\tfg\Operaciones\EcuacionGrado2.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Derivada.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Polinomio.class
+com\mycompany\sergiocollazo\tfg\controlers\ControlFicheros.class
+com\mycompany\sergiocollazo\tfg\Servlet\PdfDownload.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Operacion.class
+com\mycompany\sergiocollazo\tfg\Servlet\MaximaResult.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Matriz.class
+com\mycompany\sergiocollazo\tfg\Servlet\PdfSoloPreguntas.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Integral.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Limite.class
+com\mycompany\sergiocollazo\tfg\Operaciones\Logaritmo.class
+com\mycompany\sergiocollazo\tfg\Servlet\TexDownload.class
+com\mycompany\sergiocollazo\tfg\controlers\ControlLatex2PDF.class
+com\mycompany\sergiocollazo\tfg\controlers\StreamGobbler.class
